@@ -1,0 +1,204 @@
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #40476D;
+    color: #EB6534;
+}
+
+.navbar_logo{
+    padding: 15px;
+    margin: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.navbar_links ul{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    
+}
+
+.navbar_links li{
+    list-style-type: none;
+}
+
+.navbar_links a{
+    text-decoration: none;
+    color: #EB6534;
+    padding: 1rem;
+    display: block;
+    font-size: 20px;
+}
+
+.navbar_links a:hover, .dropdown:hover .drop_button{
+    background-color: #EB6534;
+    color: #40476D;
+}
+
+.dropdown .drop_button{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: #40476D;
+    padding: 1rem;
+    color: #EB6534;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.drop_content{
+    display: none;
+    position: absolute;
+    min-width: 130px;
+    z-index: 1;
+}
+
+.drop_content a:hover{
+    background-color: #EB6534;
+    color: #40476D
+}
+
+.dropdown:hover .drop_content{
+    display: block;
+    color: #40476D;
+}
+
+.navbar_button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.navbar_button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #EB6534;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.img_principal h1{
+    color: #40476D;
+    text-transform: uppercase;
+    border-bottom: 4px solid #acbea3;
+    text-align: center;
+    padding: 5px;    
+}
+
+ .img_principal img{
+    width: 100%;
+    height: 600px;
+    border-bottom: 4px solid #acbea3;
+} 
+
+.content{
+    display: flex;
+    color: #40476D;
+}
+
+.box{
+    padding: 15px;
+}
+
+.box h2{
+    border-bottom: 2px solid #acbea3;
+    color: #40476D;
+}
+
+.footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #40476D;
+    color: #EB6534;
+}
+
+
+@media (max-width: 600px){
+
+    body{
+        background-image: none;
+    }
+
+    .main{
+        width: auto;
+        font-size: 14px;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .navbar_button{
+        display: flex;
+    }
+
+    .navbar_links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar_links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar_links li{
+        text-align: center;
+    }
+
+    .navbar_links li a{
+        padding: 1rem;
+    }
+
+    .navbar_links.active{
+        display: flex;
+    }
+
+    .navbar_links.active .drop_content{
+        position: relative;
+    }
+
+    .navbar_links.active .dropdown .drop_button{
+        display: block;
+        width: 100%;
+    }
+
+    #top, #botton{
+        transform-origin: left;
+    }
+
+    .navbar.active .navbar_button #top{
+        transform: rotate(37deg);
+        transition: 0.6s;
+    }
+
+    .navbar.active .navbar_button #center{
+        opacity: 0;
+        transition: 0.6s;
+    }
+
+    .navbar.active .navbar_button #botton{
+        transform: rotate(-37deg);
+        transition: 0.6s;
+    }
+
+}
